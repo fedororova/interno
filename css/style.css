@@ -1,6 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:ital,wght@0,400;0,700;1,400&display=swap');
 
-body{
+body {
     /*font-family: 'DM Serif Display', serif;*/
     font-family: 'Jost', sans-serif;
+    margin: 0;
+    background-image: url("../img/line.svg");
+    background-repeat-x: no-repeat;
+    background-position: center;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /*все элементы расположены от края до края*/
+    align-items: center;
+    padding-top: 43px;
+    padding-bottom: 45px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding-left: 0; /*убрать отступ по умолчанию у тега ul*/
+}
+
+.header__item {
+    margin-left: 48px;
+}
+
+.header__item:last-child {
+    margin-left: 30px;
+}
+
+.header__link {
+    color: #292F36;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.header__search {
+    padding: 0;
+    background: transparent;
+    border: none;
+    display: flex;
+    cursor: pointer;
+}
+
+.bg {
+    max-width: 1920px;
+    background-color: #F4F0EC;
+}
+
+.footer {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between; /*все элементы расположены от края до края*/
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-size: 22px;
+    color: #4D5053;
+}
+
+.footer__info {
+    display: flex;
+    align-items: center;
+    gap: 90px; /*отступы между столбцами и строками*/
+}
+
+.footer__info a {
+    color: #4D5053;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #CDA274;
+}
+
+
