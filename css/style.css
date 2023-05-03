@@ -3,10 +3,13 @@
 body {
     /*font-family: 'DM Serif Display', serif;*/
     font-family: 'Jost', sans-serif;
-    margin: 0;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #4D5053;
+    margin: 0; /*убраны отступы по бокам*/
     background-image: url("../img/line.svg");
-    background-repeat-x: no-repeat;
-    background-position: center;
+    background-repeat-x: no-repeat; /*убрано дублирование по оси x*/
+    background-position: center; /*убраны отступы по бокам*/
 }
 
 .container {
@@ -28,7 +31,7 @@ body {
     display: flex;
     align-items: center;
     list-style-type: none;
-    padding-left: 0; /*убрать отступ по умолчанию у тега ul*/
+    padding-left: 0; /*убран отступ по умолчанию у тега ul*/
 }
 
 .header__item {
@@ -65,8 +68,6 @@ body {
     align-items: center;
     padding-top: 80px;
     padding-bottom: 80px;
-    font-size: 22px;
-    color: #4D5053;
 }
 
 .footer__info {
@@ -84,4 +85,159 @@ a:hover {
     color: #CDA274;
 }
 
+.overlay {
+    position: fixed;
+    z-index: 9999;
+    top: -100vh;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+}
+
+.modal-search {
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 140px
+}
+
+.modal-search__content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.modal-search__btn {
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.modal-search__close {
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.modal-search__input {
+    border-style: none;
+    border-bottom: 1px solid #000000;
+    width: 1045px;
+}
+
+.modal-search__input:focus {
+    outline: none;
+}
+
+.modal-search__input::placeholder {
+    font-family: 'Jost', sans-serif;
+    font-size: 22px
+}
+
+.hero {
+    position: relative;
+    overflow: hidden; /*контент обрезается, без предоставления прокрутки*/
+    border-radius: 0 0 0 30vh; /*радиус скргуления углов рамки*/
+    padding-top: 30vh;
+    padding-bottom: 40vh;
+}
+
+.hero__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover; /*cодержимое элемента обрезается, выравнивается по центру, сохранениет пропорции, полностью заполняет область контейнера*/
+    z-index: -1;
+}
+
+.hero__title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 85px;
+    color: #292F36;
+    font-weight: 400;
+    max-width: 70vh;
+    margin-top: 0;
+}
+
+.hero__text {
+    max-width: 70vh;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 75px;
+}
+
+.about-phone {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 45px;
+    margin-bottom: 47px;
+}
+
+.about-phone a {
+    text-decoration: none;
+    color: #4D5053;
+}
+
+.about_thumb {
+    position: relative;
+    overflow: hidden;
+    flex-basis: 700px;
+    height: 693px;
+    border-radius: 0 326px 0 123px;
+}
+
+.about__text {
+    flex-grow: 1;
+    flex-basis: calc(100% - 700px);
+}
+
+.about__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 50px;
+    color: #292F36;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 26px 61px 26px 31px;
+    border-radius: 18px;
+    background-color: #292F36;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-primary::after {
+    content: '';
+    background-image: url(../img/arrow-btn.svg);
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    right: 31px;
+    top: calc(50% - 9px);
+}
 

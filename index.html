@@ -30,13 +30,38 @@
                         <a href="" class="header__link">Contact</a>
                     </li>
                     <li class="header__item">
-                        <button class="header__search"><img src="img/search.svg" alt=""></button>
+                        <button class="header__search" onclick="openModal()"><img src="img/search.svg" alt=""></button>
                     </li>
                 </ul>
             </nav>
         </div>
     </div>
 </header>
+<div class="hero">
+    <img class="hero__img" src="img/bg.jpg" alt="Background">
+    <div class="container">
+        <h1 class="hero__title">Let Your Home Be Unique</h1>
+        <p class="hero__text">There are many variations of the passages of lorem Ipsum from available,variations of the
+            passages.</p>
+    </div>
+</div>
+<div class="container">
+    <div class="about">
+        <div class="about__text">
+            <h2 class="title">We Create The&nbsp;Art Of&nbsp;Stylish Living Stylishly</h2>
+            <p>It is a long-established fact that a reader will be distracted by the of readable content of a page when
+                looking at its layouts the points of using that it has a more-or-less normal.</p>
+            <div class="about-phone">
+                <div class="about-phone__icon"><img src="img/call-icon.svg" alt=""></div>
+                <div class="about-phone__text"><a href="tel:012345678"><b>012345678</b><br>Call Us Anytime</a></div>
+            </div>
+            <a href="#" class="btn-primary">Get Free Estimate</a>
+        </div>
+        <div class="about_thumb">
+            <img src="img/about.jpg" alt="" class="about__img">
+        </div>
+    </div>
+</div>
 <footer class="bg">
     <div class="container">
         <div class="footer">
@@ -51,5 +76,21 @@
         </div>
     </div>
 </footer>
+<div class="overlay" id="overlay">
+    <div class="modal-search">
+        <div class="container">
+            <div class="modal-search__content">
+                <input type="text" class="modal-search__input" placeholder="Search">
+                <button type="submit" class="modal-search__btn">
+                    <img src="img/search-page-icon.svg" alt="">
+                </button>
+                <button type="button" class="modal-search__close" onclick="closeModal()">
+                    <img src="img/close.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script/script.js"></script>
 </body>
 </html>
