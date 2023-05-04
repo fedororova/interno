@@ -212,6 +212,7 @@ a:hover {
     color: #292F36;
     line-height: 1.25;
     font-weight: 400;
+    margin-top: 0;
 }
 
 .btn-primary {
@@ -241,3 +242,124 @@ a:hover {
     top: calc(50% - 9px);
 }
 
+.swiper-slide {
+    text-align: center;
+    background: #F4F0EC;
+    border-radius: 70px;
+    padding: 88px 225px 182px;
+    box-sizing: border-box; /*w и h не включают в себя значение margin*/
+}
+
+.swiper-feedback {
+    margin-top: 200px;
+}
+
+.swiper-feedback__text {
+    font-size: 35px;
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    color: #292F36;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 90px;
+    margin-bottom: 34px;
+}
+
+.swiper-feedback__text::before {
+    content: '';
+    background-image: url(../img/quotes.svg);
+    display: block;
+    width: 31px;
+    height: 24px;
+    margin: 0 auto 27px;
+}
+
+.swiper-feedback__author {
+    text-transform: uppercase; /*Верхний регистр*/
+    font-size: 25px;
+}
+
+.swiper-button-next {
+    right: 92px;
+}
+
+.swiper-button-prev {
+    left: 92px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 52px;
+    height: 52px;
+    border-radius: 100%;
+    background: #FFFFFF;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '';
+    background-image: url(../img/swiper-button.svg);
+    width: 6px;
+    height: 14px;
+}
+
+.swiper-button-next {
+    transform: rotate(180deg);
+}
+
+.page {
+    padding-top: 178px;
+    padding-bottom: 178px;
+}
+
+.brands {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stat {
+    padding-top: 151px;
+    padding-bottom: 151px;
+    background-color: #F4F0EC;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.stats__item {
+    padding: 0 15px;
+    flex-basis: 25%;
+    position: relative;
+}
+
+.stats__item::after {
+    content: '';
+    background-image: url(../img/stats-line.jpg);
+    display: block;
+    width: 130px;
+    height: 1px;
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: rotate(90deg);
+}
+
+.stats__item:last-child::after {
+    display: none;
+}
+
+.stats__item p {
+    margin-top: 0;
+}
+
+.stats__item span {
+    display: block;
+    font-size: 85px;
+    font-family: 'DM Serif Display', serif;
+    color: #CDA274;
+}
